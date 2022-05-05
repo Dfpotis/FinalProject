@@ -3,11 +3,12 @@ package com.example.finalproject
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Callback
 
-class RecipeViewModel {
+class RecipeViewModel:ViewModel() {
     private val _response= MutableLiveData<List<Recipe>>()
     val response: LiveData<List<Recipe>>
         get()=_response

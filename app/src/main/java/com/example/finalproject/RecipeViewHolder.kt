@@ -9,7 +9,8 @@ class RecipeViewHolder(val binding:ListItemLayoutBinding) :
 
     fun bindIngredient(recipe: Recipe){
         currentRecipe=recipe
-        binding.
+        binding.title.text=currentRecipe.title
+
 
 
     }
