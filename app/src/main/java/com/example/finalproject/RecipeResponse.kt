@@ -18,6 +18,9 @@ class RecipeResults{
 
     @Json(name="analyzedInstructions")
     lateinit var analyzedInstructionsList:List<Steps>
+
+    @Json(name="image")
+    lateinit var image:String
 }
 class Steps{
     @Json(name="step")

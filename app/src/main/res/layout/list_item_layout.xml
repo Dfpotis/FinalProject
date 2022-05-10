@@ -5,15 +5,17 @@
     android:layout_height="wrap_content">
 
     <ImageView
+        android:src="@drawable/picture"
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="10dp"
-        android:src="@drawable/picture"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+/>
 
     <TextView
+        android:gravity="center"
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

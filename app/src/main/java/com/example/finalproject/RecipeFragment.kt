@@ -11,9 +11,7 @@ import androidx.lifecycle.Observer
 import com.example.finalproject.databinding.FragmentMainBinding
 
 
-
-
-class MainFragment : Fragment() {
+class RecipeFragment : Fragment() {
     private var _binding: FragmentMainBinding?=null
     private val binding get()=_binding!!
 
@@ -25,7 +23,7 @@ class MainFragment : Fragment() {
         _binding= FragmentMainBinding.inflate(inflater, container, false)
         viewModel.getRecipes()
         viewModel.response.observe(viewLifecycleOwner, Observer { recipeList ->
-            val adapter=RecipeAdapter(recipeList)
+            val adapter= RecipeAdapter(recipeList)
             binding.recyclerView.adapter=adapter
         })
         return binding.root

@@ -19,10 +19,10 @@ private val retrofit= Retrofit.Builder()
 private const val QUERY_STRING=
     "complexSearch"+
     "?apiKey=7b93c4ebc9d1403f9b9bc69cac84b502"+
-            "&cuisine=italian"+
+            "&cuisine=chinese"+
             "&instructionsRequired=true"+
             "&addRecipeInformation=true"+
-            "&number=200"+
+            "&number=50"+
             "&type=mainCourse"
 
 interface RecipeApiService {
