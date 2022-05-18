@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/cuisineFragment">
 
@@ -10,6 +11,15 @@
         android:label="MainFragment" />
     <fragment
         android:id="@+id/cuisineFragment"
-        android:name="com.example.finalproject.cuisine.CuisineFragment"
-        android:label="CuisineFragment" />
+        android:name="com.example.finalproject.CuisineFragment"
+        android:label="CuisineFragment" >
+        <action
+            android:id="@+id/action_cuisineFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fridgeFragment"
+        android:name="com.example.finalproject.FridgeFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" />
 </navigation>

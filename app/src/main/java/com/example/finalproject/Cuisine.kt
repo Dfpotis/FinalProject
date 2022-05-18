@@ -1,3 +1,3 @@
 package com.example.finalproject
 
-data class Cuisine (val title:String)
+data class Cuisine (val text:String)

@@ -1,15 +1,11 @@
 package com.example.finalproject
 
-
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
-
 
 private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 private const val BASE_URL="https://api.spoonacular.com/recipes/"
@@ -17,20 +13,24 @@ private val retrofit= Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL)
     .build()
-private const val QUERY_STRING=
-    "complexSearch"+
-    "?apiKey=7b93c4ebc9d1403f9b9bc69cac84b502"+
-            "&cuisine="+ cuisineURL+
-            "&instructionsRequired=true"+
-            "&addRecipeInformation=true"+
-            "&number=10"+
-            "&type=mainCourse"
-interface RecipeApiService {
-    @GET(QUERY_STRING)
-    fun getRecipes(): Call<RecipeResponse>
+private const val url= "complexSearch"+
+        "?apiKey=7b93c4ebc9d1403f9b9bc69cac84b502"+
+        "&instructionsRequired=true"+
+        "&addRecipeInformation=true"+
+        "&number=5000"+
+        "&type=mainCourse"+
+        "&fillIngredients=true"
+
+
+
+
+
+interface FridgeApiService {
+    @GET(url)
+    fun getFridge(): Call<FridgeResponse>
 }
-object RecipeApi {
-    val recipeApi: RecipeApiService by lazy {
-        retrofit.create(RecipeApiService::class.java)
+object FridgeApi {
+    val fridgeApi: FridgeApiService by lazy {
+        retrofit.create(FridgeApiService::class.java)
     }
 }

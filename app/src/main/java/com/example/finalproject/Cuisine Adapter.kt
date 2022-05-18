@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.Cuisine
 import com.example.finalproject.CuisineViewHolder
-import com.example.finalproject.databinding.ListItemLayoutBinding
+import com.example.finalproject.databinding.ListItemLayoutTwoBinding
 
 class CuisineAdapter (val cuisineList: List<Cuisine>) : RecyclerView.Adapter<CuisineViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CuisineViewHolder {
-        val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ListItemLayoutTwoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CuisineViewHolder(binding)
     }
 
