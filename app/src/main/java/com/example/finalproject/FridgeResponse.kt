@@ -13,7 +13,7 @@ class FridgeResults {
 }
 class Ingredients{
     @Json(name="aisle")
-    lateinit var aisle:String
+    var aisle:String?="misc"
 
     @Json(name="name")
     lateinit var name:String

@@ -14,7 +14,6 @@ import com.example.finalproject.databinding.FragmentMainBinding
 class RecipeFragment : Fragment() {
     private var _binding: FragmentMainBinding?=null
     private val binding get()=_binding!!
-
     private val viewModel: RecipeViewModel by viewModels()
 
 

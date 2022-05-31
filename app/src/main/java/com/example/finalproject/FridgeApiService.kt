@@ -13,11 +13,11 @@ private val retrofit= Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
     .baseUrl(BASE_URL)
     .build()
-private const val url= "complexSearch"+
+private const val QUERRY_STRING= "complexSearch"+
         "?apiKey=7b93c4ebc9d1403f9b9bc69cac84b502"+
         "&instructionsRequired=true"+
         "&addRecipeInformation=true"+
-        "&number=5000"+
+        "&number=5"+
         "&type=mainCourse"+
         "&fillIngredients=true"
 
@@ -26,7 +26,7 @@ private const val url= "complexSearch"+
 
 
 interface FridgeApiService {
-    @GET(url)
+    @GET(QUERRY_STRING)
     fun getFridge(): Call<FridgeResponse>
 }
 object FridgeApi {

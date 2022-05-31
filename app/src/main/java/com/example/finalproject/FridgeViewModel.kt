@@ -20,11 +20,12 @@ class FridgeViewModel: ViewModel() {
                 Log.d("RESPONSE", "Failure: " + t.message)
             }
             override fun onResponse(call: Call<FridgeResponse>, response: Response<FridgeResponse>){
+                Log.d("RESPONSE", "Sucsess")
                 var listOfFridgeFetched=mutableListOf<Fridge>()
                 val fridgeResponse: FridgeResponse?=response.body()
                 val fridgeResponseList=fridgeResponse?.fridgeResponseList?:listOf()
                 for(fridgeResults in fridgeResponseList){
-                    val extendedIngredientsList=fridgeResults?.extendedIngredientsList?:listOf()
+                    val extendedIngredientsList=fridgeResults.extendedIngredientsList
                     for(ingredients in extendedIngredientsList){
                         val title=ingredients.name
                         val aisle=ingredients.aisle
