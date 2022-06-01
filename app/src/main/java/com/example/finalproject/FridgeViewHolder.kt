@@ -14,7 +14,6 @@ class FridgeViewHolder(val binding: ListItemLayoutThreeBinding) :
             currentFridge=fridge
             var aisleName=""
             var abc=""
-
             val aisleSpot = currentFridge.aisle?.indexOf(";")
             if (aisleSpot != null) {
                 if(aisleSpot>0){
@@ -39,6 +38,7 @@ class FridgeViewHolder(val binding: ListItemLayoutThreeBinding) :
                }
            }
             num=0
-                binding.aisle.text = abc + aisleList.indexOf(aisleName)
+            if(abc.equals("")==false)
+                binding.aisle.text = abc
         }
     }
