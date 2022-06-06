@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fridgeFragment">
+    app:startDestination="@id/startFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -21,5 +21,36 @@
         android:id="@+id/fridgeFragment"
         android:name="com.example.finalproject.FridgeFragment"
         android:label="fragment_options"
-        tools:layout="@layout/fragment_options" />
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_fridgeFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.example.finalproject.FoodFragment"
+        android:label="FoodFragment" />
+    <fragment
+        android:id="@+id/myFridgeFragment"
+        android:name="com.example.finalproject.MyFridgeFragment"
+        android:label="fragment_my_fridge"
+        tools:layout="@layout/fragment_my_fridge" >
+        <action
+            android:id="@+id/action_myFridgeFragment_to_fridgeFragment"
+            app:destination="@id/fridgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.finalproject.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_fridgeFragment"
+            app:destination="@id/fridgeFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_myFridgeFragment"
+            app:destination="@id/myFridgeFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_cuisineFragment"
+            app:destination="@id/cuisineFragment" />
+    </fragment>
 </navigation>

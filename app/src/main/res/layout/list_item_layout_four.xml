@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/snack"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="40dp">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#A5FFD6"
-        android:textColor="#FFFFFF"
-        android:layout_marginLeft="5dp"
-        android:text="word"
+        android:id="@+id/aisle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="#A5FFD6"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/textView2"
-        android:id="@+id/title"/>
+        android:paddingLeft="5dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"/>
+
+    <CheckBox
+        android:background="#A5FFD6"
+        android:id="@+id/check"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"

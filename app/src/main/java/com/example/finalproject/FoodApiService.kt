@@ -25,12 +25,12 @@ private const val QUERRY_STRING= "complexSearch"+
 
 
 
-interface FridgeApiService {
+interface FoodApiService {
     @GET(QUERRY_STRING)
-    fun getFridge(): Call<FridgeResponse>
+    fun getFood(): Call<FoodResponse>
 }
-object FridgeApi {
-    val fridgeApi: FridgeApiService by lazy {
-        retrofit.create(FridgeApiService::class.java)
+object FoodApi {
+    val foodApi: FoodApiService by lazy {
+        retrofit.create(FoodApiService::class.java)
     }
 }

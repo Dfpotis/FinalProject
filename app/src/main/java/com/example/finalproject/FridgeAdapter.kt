@@ -15,18 +15,9 @@ class FridgeAdapter(val fridgeList: List<Fridge>) : RecyclerView.Adapter<FridgeV
     }
 
     override fun onBindViewHolder(currentViewHolder: FridgeViewHolder, position: Int) {
-        var num=0
-        while(num< aisleList.size)
-        if(fridgeList[position].aisle.equals(aisleList[num])) {
-            num+= aisleList.size+10
-        }
-        else if(num==aisleList.size-1){
             val currentCourse = fridgeList[position]
             currentViewHolder.bindFridge(currentCourse)
-        }
-        else{
-            num++
-        }
+
     }
 
     override fun getItemCount(): Int {

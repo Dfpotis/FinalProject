@@ -19,8 +19,8 @@ private val retrofit= Retrofit.Builder()
     .build()
 private const val QUERY_STRING=
     "complexSearch"+
-    "?apiKey=7b93c4ebc9d1403f9b9bc69cac84b502"+
-            "&cuisine="+ cuisineURL+
+    "?apiKey=85000ea0e096460295bf7d666f8b647e"+
+            "&cuisine=italian"+
             "&instructionsRequired=true"+
             "&addRecipeInformation=true"+
             "&number=10"+

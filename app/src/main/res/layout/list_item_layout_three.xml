@@ -3,27 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/color"
     android:layout_width="match_parent"
+
     android:layout_height="40dp">
 
     <TextView
         android:id="@+id/aisle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#A5FFD6"
+        android:paddingLeft="5dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="3dp"
+        android:background="#FFA69E"
         android:text=""
-        android:background="#610023"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
